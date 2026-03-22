@@ -1,6 +1,6 @@
 # OSCAN – Automated OSINT Recon Tool
 
-OSCAN is a CLI-based tool that automates reconnaissance tasks such as domain analysis and username enumeration, with built-in security analysis and scoring.
+OSCAN is a CLI-based OSINT and reconnaissance tool that automates domain analysis and username enumeration with built-in security analysis and scoring.
 
 ---
 
@@ -114,6 +114,18 @@ Install them before using OSCAN:
 ```bash
 pipx install sherlock-project
 pipx install maigret
+```
+## Example Output
+
+```
+--- SECURITY ANALYSIS ---
+
+[HIGH] Content-Security-Policy: Missing → allows XSS attacks
+[LOW] Referrer-Policy: Missing → may leak sensitive data
+
+--- SECURITY SCORE ---
+
+MODERATE (65/100)
 ```
 
 ## Why OSCAN
