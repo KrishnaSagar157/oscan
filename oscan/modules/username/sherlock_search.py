@@ -2,11 +2,11 @@ import subprocess
 import time
 import shutil
 
-if not shutil.which("sherlock"):
-    print("[!] Sherlock not found. Install: pipx install sherlock-project")
-    return
-
 def search_sherlock(username):
+    # --- Check if sherlock exists ---#
+    if not shutil.which("sherlock"):
+        return "[!] Sherlock not found. Install: pipx install sherlock-project"
+
     command=["sherlock", username, "--print-found", "--no-txt"]
     start_time = time.time()
 
