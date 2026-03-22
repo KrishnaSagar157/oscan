@@ -102,6 +102,20 @@ Reports are automatically generated in:
 
 ---
 
+## Additional Requirements
+
+This tool depends on external OSINT tools:
+
+* Sherlock
+* Maigret
+
+Install them before using OSCAN:
+
+```bash
+pipx install sherlock-project
+pipx install maigret
+```
+
 ## Why OSCAN
 
 * Combines multiple reconnaissance techniques into one tool
