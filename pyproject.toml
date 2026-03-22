@@ -1,0 +1,14 @@
+[project]
+name = "oscan"
+version = "1.0.0"
+description = "Automated OSINT Recon Tool"
+dependencies = [
+    "requests",
+    "colorama"
+]
+
+[project.scripts]
+oscan = "oscan.main:main"
+
+[tool.setuptools.packages.find]
+include = ["oscan*"]
