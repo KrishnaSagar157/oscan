@@ -1,4 +1,8 @@
-import subprocess
+import shutil
+
+if not shutil.which("maigret"):
+    print("[!] Maigret not found. Install: pipx install maigret")
+    returnimport subprocess
 
 def search_maigret(username):
 

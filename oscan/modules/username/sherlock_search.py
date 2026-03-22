@@ -1,5 +1,10 @@
 import subprocess
 import time
+import shutil
+
+if not shutil.which("sherlock"):
+    print("[!] Sherlock not found. Install: pipx install sherlock-project")
+    return
 
 def search_sherlock(username):
     command=["sherlock", username, "--print-found", "--no-txt"]
