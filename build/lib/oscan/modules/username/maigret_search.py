@@ -1,6 +1,11 @@
+import shutil
 import subprocess
 
 def search_maigret(username):
+
+    # --- Check if maigret exists --- #
+    if not shutil.which("maigret"):
+        return "[!] Maigret not found. Install: pipx install maigret"
 
     command = ["maigret", username, "--no-progressbar"]
 
@@ -11,4 +16,3 @@ def search_maigret(username):
     )
 
     return result.stdout + result.stderr
-

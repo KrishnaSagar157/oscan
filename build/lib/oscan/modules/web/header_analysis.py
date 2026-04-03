@@ -1,11 +1,13 @@
 import requests
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 def header_analysis(domain):
 
     url = f"https://{domain}"
 
     try:
-        response = requests.get(url, timeout=5)
+        response = requests.get(url, timeout=5, verify=False)
 
         headers = response.headers
 

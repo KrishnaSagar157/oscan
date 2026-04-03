@@ -102,7 +102,7 @@ def save_domain_report(domain, dns, subs, headers, security, dirs, ports, scan_t
         for p in ports:
             f.write(str(p) + "\n")
         
-        file.write(f"Scan Time: {scan_time} seconds\n")
-        file.write(f"Scanned At: {scan_timestamp}\n\n")
+        f.write(f"Scan Time: {scan_time} seconds\n")
+        f.write(f"Scanned At: {scan_timestamp}\n\n")
     
     print(f"[+] Report saved: {filename}")

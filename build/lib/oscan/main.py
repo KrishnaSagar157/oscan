@@ -237,12 +237,15 @@ def main():
 
             if score >= 80:
                 level = "SECURE"
+                color = Fore.GREEN
             elif score >= 50:
                 level = "MODERATE"
+                color = Fore.YELLOW
             else:
                 level = "WEAK"
+                color = Fore.RED
 
-            print(f"{color}{level} ({score}/10) {Style.RESET_ALL}")    
+            print(f"{color}{level} ({score}/100) {Style.RESET_ALL}")    
 
         # Save report
         save_domain_report(target, dns_results, subdomains, headers, security, directories, ports, scan_time)
